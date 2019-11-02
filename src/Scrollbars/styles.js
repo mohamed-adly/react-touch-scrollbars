@@ -42,7 +42,7 @@ export const trackHorizontalStyleDefault = {
 
 export const trackVerticalStyleDefault = {
     position: 'absolute',
-    width: 6
+    width: 6,
 };
 
 export const thumbHorizontalStyleDefault = {
