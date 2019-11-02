@@ -64,3 +64,9 @@ export const disableSelectStyle = {
 export const disableSelectStyleReset = {
     userSelect: ''
 };
+
+export const viewStyleRtlUniversalInitial = {
+    ...viewStyleUniversalInitial,
+    marginRight: undefined,
+    marginLeft: 0,
+};

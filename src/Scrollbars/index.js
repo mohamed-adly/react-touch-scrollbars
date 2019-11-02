@@ -20,7 +20,8 @@ import {
     thumbHorizontalStyleDefault,
     thumbVerticalStyleDefault,
     disableSelectStyle,
-    disableSelectStyleReset
+    disableSelectStyleReset,
+    viewStyleRtlUniversalInitial,
 } from './styles';
 
 import {
@@ -508,6 +509,7 @@ export default class Scrollbars extends Component {
             autoHeightMax,
             style,
             children,
+            isRTL,
             ...props
         } = this.props;
         /* eslint-enable no-unused-vars */
@@ -527,7 +529,10 @@ export default class Scrollbars extends Component {
         const viewStyle = {
             ...viewStyleDefault,
             // Hide scrollbars by setting a negative margin
-            marginRight: scrollbarWidth ? -scrollbarWidth : 0,
+            ...(isRTL ?
+                { marginLeft: scrollbarWidth ? -scrollbarWidth : 0 } :
+                { marginRight: scrollbarWidth ? -scrollbarWidth : 0 }
+            ),
             marginBottom: scrollbarWidth ? -scrollbarWidth : 0,
             ...(autoHeight && {
                 ...viewStyleAutoHeight,
@@ -545,7 +550,7 @@ export default class Scrollbars extends Component {
                 maxHeight: autoHeightMax
             }),
             // Override
-            ...((universal && !didMountUniversal) && viewStyleUniversalInitial)
+            ...((universal && !didMountUniversal) && (isRTL ? viewStyleRtlUniversalInitial : viewStyleUniversalInitial))
         };
 
         const trackAutoHeightStyle = {
@@ -596,6 +601,7 @@ export default class Scrollbars extends Component {
 }
 
 Scrollbars.propTypes = {
+    isRTL: PropTypes.bool,
     onScroll: PropTypes.func,
     onScrollFrame: PropTypes.func,
     onScrollStart: PropTypes.func,
@@ -643,4 +649,5 @@ Scrollbars.defaultProps = {
     autoHeightMin: 0,
     autoHeightMax: 200,
     universal: false,
+    isRTL: false,
 };
