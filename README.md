@@ -1,6 +1,6 @@
 react-touch-scrollbars
 =========================
-This is a for of react-custom-scrollbars, with RTL support and fixes.
+This is a fork of react-custom-scrollbars, with RTL support and fixes.
 I had to create this since the mentainer of the original package is ignoring users requests of adding RTL support.
 
 ## Installation
