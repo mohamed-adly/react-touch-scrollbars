@@ -1,6 +1,6 @@
 {
   "name": "react-touch-scrollbars",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A fork of 'React scrollbars' component with RTL support",
   "main": "lib/index.js",
   "scripts": {
