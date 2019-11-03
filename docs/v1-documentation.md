@@ -1,4 +1,4 @@
-# v2.x Documentation
+# v1.x Documentation
 ## Table of Contents
 
 - [Customization](#customization)
@@ -6,7 +6,7 @@
 
 ## Customization
 ```javascript
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-touch-scrollbars';
 
 class CustomScrollbars extends Component {
   render() {
@@ -43,6 +43,7 @@ class App extends Component {
 
 #### Props
 
+* `isRTL`: (bool)) Align vertical scrollbar to left, default is {false}
 * `renderScrollbarHorizontal`: (Function) Horizontal scrollbar element
 * `renderScrollbarVertical`: (Function) Vertical scrollbar element
 * `renderThumbHorizontal`: (Function) Horizontal thumb element
@@ -66,7 +67,7 @@ class App extends Component {
 **NOTE**: If you use `renderScrollbarHorizontal`, **make sure that you define a height value** with css or inline styles. If you use `renderScrollbarVertical`, **make sure that you define a width value with** css or inline styles.
 
 ```javascript
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-touch-scrollbars';
 
 class CustomScrollbars extends Component {
   render() {
@@ -103,7 +104,7 @@ class CustomScrollbars extends Component {
     * `left`, `top`, `scrollLeft`, `scrollTop`, `scrollWidth`, `scrollHeight`, `clientWidth`, `clientHeight`
 
 ```javascript
-import { Scrollbars } from 'react-custom-scrollbars';
+import { Scrollbars } from 'react-touch-scrollbars';
 
 class App extends Component {
   handleClick() {

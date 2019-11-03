@@ -1,13 +1,13 @@
 {
   "name": "react-touch-scrollbars",
-  "version": "4.2.1",
-  "description": "React scrollbars component",
+  "version": "1.0.2",
+  "description": "A fork of 'React scrollbars' component with RTL support",
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib dist",
     "build": "babel src --out-dir lib",
-    "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/react-custom-scrollbars.js",
-    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/react-custom-scrollbars.min.js",
+    "build:umd": "cross-env NODE_ENV=development webpack src/index.js dist/react-touch-scrollbars.js",
+    "build:umd:min": "cross-env NODE_ENV=production webpack src/index.js dist/react-touch-scrollbars.min.js",
     "lint": "eslint src test examples",
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "cross-env NODE_ENV=test karma start --auto-watch --no-single-run",
@@ -24,7 +24,9 @@
     "scrollbars",
     "react-component",
     "react",
-    "custom"
+    "custom",
+    "touch",
+    "rtl"
   ],
   "author": "Mohamed Elgaafary",
   "license": "MIT",

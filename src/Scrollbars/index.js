@@ -530,8 +530,8 @@ export default class Scrollbars extends Component {
             ...viewStyleDefault,
             // Hide scrollbars by setting a negative margin
             ...(isRTL ?
-                { marginLeft: scrollbarWidth ? -scrollbarWidth : 0} :
-                { marginRight: scrollbarWidth ? -scrollbarWidth : 0}
+                { marginLeft: scrollbarWidth ? -scrollbarWidth : 0 } :
+                { marginRight: scrollbarWidth ? -scrollbarWidth : 0 }
             ),
             marginBottom: scrollbarWidth ? -scrollbarWidth : 0,
             ...(autoHeight && {
@@ -580,7 +580,7 @@ export default class Scrollbars extends Component {
             ...((!scrollbarWidth || (universal && !didMountUniversal)) && {
                 display: 'none',
             }),
-            ...(this.props.isRTL? trackRTLPosition : trackPosition)
+            ...(this.props.isRTL ? trackRTLPosition : trackPosition)
         };
 
         return createElement(tagName, { ...props, style: containerStyle, ref: (ref) => { this.container = ref; } }, [
