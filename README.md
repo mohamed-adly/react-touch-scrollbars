@@ -8,6 +8,25 @@ I had to create this since the mentainer of the original package is ignoring use
 npm install react-touch-scrollbars --save
 ```
 
+## Usage
+
+The same as original component but with the introduction on the new prop
+isRTL
+
+```javascript
+import { Scrollbars } from 'react-touch-scrollbars';
+
+class App extends Component {
+  render() {
+    return (
+      <Scrollbars isRTL style={{ width: 500, height: 300 }}>
+        <p>Some great content...</p>
+      </Scrollbars>
+    );
+  }
+}
+```
+
 the original read me file 
 
 react-custom-scrollbars
